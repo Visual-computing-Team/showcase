@@ -1,8 +1,8 @@
 baseURL = "https://github.com/Visual-computing-Team/showcase"
 languageCode = "en-us"
 title = "Showcase Template"
-#theme = 'book'
-theme = ["github.com/onweru/compose"]
+theme = 'book'
+#theme = ["github.com/onweru/compose"]
 
 # Book configuration
 disablePathToLower = true
