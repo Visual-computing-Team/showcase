@@ -1,6 +1,6 @@
 {
-  "name": "Showcase",
-  "short_name": "Showcase",
+  "name": "Showcase Template",
+  "short_name": "Showcase Template",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
