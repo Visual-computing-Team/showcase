@@ -1,6 +1,6 @@
 baseURL = "https://github.com/Visual-computing-Team/showcase"
 languageCode = "en-us"
-title = "Showcase Template"
+title = "Showcase"
 theme = "book"
 
 # Book configuration
