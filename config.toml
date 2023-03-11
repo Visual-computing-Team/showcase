@@ -1,7 +1,7 @@
-baseURL = "https://github.com/Visual-computing-Team/showcase"
+baseURL = "https://Visual-computing-Team/showcase"
 languageCode = "en-us"
 title = "Showcase Template"
-theme = "book"
+theme = 'book'
 
 # Book configuration
 disablePathToLower = true
