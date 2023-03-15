@@ -8,7 +8,7 @@ Soy estudiante de Ingeniería de Sistemas y Computación de 10mo semestre. Mis i
 
 # Santiago Rodríguez
 <p align="center">
-    <img src="Anderson.jpg" alt="Anderson's photo" style="border-radius: 100%; width: 200px; height: 200px">
+    <img src="Santiago.jpeg" alt="Santiago's photo" style="border-radius: 100%; width: 200px; height: 200px">
 </p>
 Soy estudiante de Ingeniería de Sistemas y Computación de 9no semestre. Entre mis principales intereses respecto a la carrera se encuentra el desarrollo web enfocado en front-end en frameworks como Angular y React Js. Por otro lado me interesa el campo back-end (relacionado a node.js) para que de este manera pueda tener un conocimiento full-stack. En cuanto a mis pasatiempos principales, me gusta leer sobre la historia, la filosofía y la poesía; me gusta bailar ritmos latinos y escribir. 
 
