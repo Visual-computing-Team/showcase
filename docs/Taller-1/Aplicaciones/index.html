@@ -1,0 +1,230 @@
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Color Blindness # Corrección RGB # Corrección con el método de contraste RGB for (let x = 0; x < img.width; x++) { for (let y = 0; y < img.height; y++) { let pixelIndex = (x + y * img.width) * 4; let r = img.pixels[pixelIndex]; let g = img.pixels[pixelIndex + 1]; let b = img.pixels[pixelIndex + 2]; // correct daltonism using RGB contrast method let rgContrast = 2."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Color Blindness # Corrección RGB # Corrección con el método de contraste RGB for (let x = 0; x < img.width; x++) { for (let y = 0; y < img.height; y++) { let pixelIndex = (x + y * img.width) * 4; let r = img.pixels[pixelIndex]; let g = img.pixels[pixelIndex + 1]; let b = img.pixels[pixelIndex + 2]; // correct daltonism using RGB contrast method let rgContrast = 2."><meta property="og:type" content="article"><meta property="og:url" content="https://Visual-computing-Team/showcase/docs/Taller-1/Aplicaciones/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-03-14T20:28:43-05:00"><title>Aplicaciones | Showcase Template</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<script defer src=/showcase/en.search.min.3a8d658c77eb93c7f12a2b8af49a700131e474f288eefb605d9fa61576dbe5a7.js integrity="sha256-Oo1ljHfrk8fxKiuK9JpwATHkdPKI7vtgXZ+mFXbb5ac=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Showcase Template</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/showcase/docs/Equipo/>Equipo</a><ul></ul></li><li class=book-section-flat><span>Taller 1</span><ul><li><a href=/showcase/docs/Taller-1/Aplicaciones/ class=active>Aplicaciones</a></li><li><a href=/showcase/docs/Taller-1/1-Marco-te%C3%B3rico/>1) Marco Teórico</a></li><li><a href=/showcase/docs/Taller-1/2-Daltonismo/>2) Daltonismo</a></li><li><a href=/showcase/docs/Taller-1/3-Interactividad-con-Luma/>3) Interactividad Con Luma</a></li></ul></li></ul><ul><li><a href=/showcase/posts/>Blog</a></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
+<strong>Aplicaciones</strong>
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#color-blindness>Color Blindness</a><ul><li><a href=#corrección-rgb>Corrección RGB</a></li><li><a href=#corrección-hsv>Corrección HSV</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h2 id=color-blindness>Color Blindness
+<a class=anchor href=#color-blindness>#</a></h2><h3 id=corrección-rgb>Corrección RGB
+<a class=anchor href=#correcci%c3%b3n-rgb>#</a></h3><details><summary>Corrección con el método de contraste RGB</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>x</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span>; <span style=color:#a6e22e>x</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>y</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>height</span>; <span style=color:#a6e22e>y</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>pixelIndex</span> <span style=color:#f92672>=</span> (<span style=color:#a6e22e>x</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span>) <span style=color:#f92672>*</span> <span style=color:#ae81ff>4</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>pixelIndex</span>];
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>pixelIndex</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>pixelIndex</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// correct daltonism using RGB contrast method
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>rgContrast</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2.6</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>rAdjusted</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>r</span><span style=color:#f92672>/</span><span style=color:#ae81ff>255</span>), <span style=color:#a6e22e>rgContrast</span>) <span style=color:#f92672>*</span> <span style=color:#ae81ff>255</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>gAdjusted</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>pow</span>((<span style=color:#a6e22e>g</span><span style=color:#f92672>/</span><span style=color:#ae81ff>255</span>), <span style=color:#a6e22e>rgContrast</span>) <span style=color:#f92672>*</span> <span style=color:#ae81ff>255</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>pixelIndex</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>rAdjusted</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>pixelIndex</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>gAdjusted</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>pixelIndex</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span></code></pre></div></div></details><iframe id="rgb-contrast.js?version=2" style=width:735px;height:400px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/rgb-contrast.js?version=2></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe>
+<details><summary>Simulación de daltonismo con la corrección RGB</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#75715e>// Loop through each pixel in the image
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>4</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Get the RGB values for the current pixel
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Apply the appropriate filter to the pixel based on the filterType parameter
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>filterType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;protanopia&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.567</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.433</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.558</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.442</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>filterType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;deuteranopia&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.625</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.375</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.7</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.3</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>filterType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;tritanopia&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.95</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.05</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.433</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.567</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.475</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.525</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Set the filtered pixel&#39;s RGB values
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>r</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>g</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>3</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>255</span>; <span style=color:#75715e>// Set alpha value to 255 (fully opaque)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span></code></pre></div></div></details><iframe id="daltonismo-rgb.js?version=3" style=width:735px;height:800px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/daltonismo-rgb.js?version=3></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe><h3 id=corrección-hsv>Corrección HSV
+<a class=anchor href=#correcci%c3%b3n-hsv>#</a></h3><details><summary>Corrección con el método de contraste HSV</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#75715e>//Go throw the image to change the pixels value
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>x</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>x</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span>; <span style=color:#a6e22e>x</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>y</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>y</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>height</span>; <span style=color:#a6e22e>y</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>pixel</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>get</span>(<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>); <span style=color:#75715e>// get the color of the pixel in the original image
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>hsv</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>rgbToHsv</span>(<span style=color:#a6e22e>pixel</span>); <span style=color:#75715e>// convert the color from RGB to HSV
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>      <span style=color:#75715e>// adjust the hue, saturation, and value values based on the type of daltonism
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#75715e>// for example, for protanopia, we need to shift the hue towards blue
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>hsv</span>.<span style=color:#a6e22e>h</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>adjustHueForProtanopia</span>(<span style=color:#a6e22e>hsv</span>.<span style=color:#a6e22e>h</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>hsv</span>.<span style=color:#a6e22e>s</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>adjustSaturationForProtanopia</span>(<span style=color:#a6e22e>hsv</span>.<span style=color:#a6e22e>s</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>hsv</span>.<span style=color:#a6e22e>v</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>adjustValueForProtanopia</span>(<span style=color:#a6e22e>hsv</span>.<span style=color:#a6e22e>v</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>correctedPixel</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>hsvToRgb</span>(<span style=color:#a6e22e>hsv</span>); <span style=color:#75715e>// convert the color back to RGB
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>correctedImg</span>.<span style=color:#a6e22e>set</span>(<span style=color:#a6e22e>x</span>, <span style=color:#a6e22e>y</span>, <span style=color:#a6e22e>correctedPixel</span>); <span style=color:#75715e>// set the corrected pixel color in the new image
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Functions to adjust the values of HSV model for protanopia
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>adjustHueForProtanopia</span>(<span style=color:#a6e22e>hue</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>m</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.8465</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>maxHue</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>359</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>minHue</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>hue</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>hue</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>360</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>hue</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>hue</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>360</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>result</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>hue</span> <span style=color:#f92672>&gt;=</span> <span style=color:#a6e22e>minHue</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>hue</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>60</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>hue</span> <span style=color:#f92672>/</span> <span style=color:#a6e22e>m</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>hue</span> <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>60</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>hue</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>170</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>60</span> <span style=color:#f92672>+</span> (<span style=color:#a6e22e>hue</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>60</span>) <span style=color:#f92672>/</span> <span style=color:#a6e22e>m</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>hue</span> <span style=color:#f92672>&gt;=</span> <span style=color:#ae81ff>170</span> <span style=color:#f92672>&amp;&amp;</span> <span style=color:#a6e22e>hue</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>270</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>hue</span> <span style=color:#f92672>/</span> <span style=color:#a6e22e>m</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>60</span> <span style=color:#f92672>+</span> (<span style=color:#a6e22e>hue</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>360</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>170</span>) <span style=color:#f92672>/</span> <span style=color:#a6e22e>m</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>round</span>(<span style=color:#a6e22e>result</span>);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>result</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>minHue</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>360</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>result</span> <span style=color:#f92672>&gt;</span> <span style=color:#a6e22e>maxHue</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>-=</span> <span style=color:#ae81ff>360</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>result</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>adjustSaturationForProtanopia</span>(<span style=color:#a6e22e>saturation</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>m</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.3</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>maxSaturation</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>minSaturation</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>result</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>saturation</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0.1</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>saturation</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>saturation</span> <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>0.8</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>saturation</span> <span style=color:#f92672>**</span> <span style=color:#a6e22e>m</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>maxSaturation</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>result</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>adjustValueForProtanopia</span>(<span style=color:#a6e22e>value</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>m</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.4</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>maxVal</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>minVal</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>result</span>;
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>value</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>0.1</span>) {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>value</span>;
+</span></span><span style=display:flex><span>        } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>            <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>value</span> <span style=color:#f92672>**</span> <span style=color:#a6e22e>m</span>;
+</span></span><span style=display:flex><span>        }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>result</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>max</span>(<span style=color:#a6e22e>minVal</span>, Math.<span style=color:#a6e22e>min</span>(<span style=color:#a6e22e>maxVal</span>, <span style=color:#a6e22e>result</span>));
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>return</span> <span style=color:#a6e22e>result</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><iframe id=hsv-contrast style=width:735px;height:400px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/hsv-contrast.js></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe>
+<details><summary>Simulación de daltonismo con la corrección HSV</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#75715e>// Loop through each pixel in the image
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span><span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>.<span style=color:#a6e22e>length</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>4</span>) {
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Get the RGB values for the current pixel
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>];
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Apply the appropriate filter to the pixel based on the filterType parameter
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>filterType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;protanopia&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.567</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.433</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.558</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.442</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>filterType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;deuteranopia&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.625</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.375</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.7</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.3</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>filterType</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;tritanopia&#39;</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>r</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.95</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>r</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.05</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>g</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.433</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.567</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>b</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.475</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>g</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.525</span> <span style=color:#f92672>*</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Set the filtered pixel&#39;s RGB values
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>r</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>1</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>g</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>2</span>] <span style=color:#f92672>=</span> <span style=color:#a6e22e>b</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>filteredImg</span>.<span style=color:#a6e22e>pixels</span>[<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#ae81ff>3</span>] <span style=color:#f92672>=</span> <span style=color:#ae81ff>255</span>; <span style=color:#75715e>// Set alpha value to 255 (fully opaque)
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>}
+</span></span></code></pre></div></div></details><iframe id="daltonismo-hsv.js?version=3" style=width:735px;height:800px srcdoc="
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+            <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
+            
+            
+            
+            
+            
+            <script src=/showcase/sketches/daltonismo-hsv.js?version=3></script>
+          </head>
+          <body>
+          </body>
+        </html>
+      "></iframe></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/73e814138cea1d0fe92b18f78d288b0c66dad58e title='Last modified by AndersonVargas8 | March 15, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>March 15, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#color-blindness>Color Blindness</a><ul><li><a href=#corrección-rgb>Corrección RGB</a></li><li><a href=#corrección-hsv>Corrección HSV</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
