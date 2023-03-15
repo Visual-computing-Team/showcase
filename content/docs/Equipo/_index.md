@@ -2,7 +2,7 @@
 
 # Alejandra Superlano
 <p align="center">
-    <img src="Anderson.jpg" alt="Anderson's photo" style="border-radius: 100%; width: 200px; height: 200px">
+    <img src="Alejandra.jpg" alt="Alejandra's photo" style="border-radius: 100%; width: 200px; height: 200px">
 </p>
 Soy estudiante de Ingeniería de Sistemas y Computación de 10mo semestre. Mis intereses concernientes a la ingeniería se centran en el desarrollo del backend de aplicaciones web utilizando `Java` con el framework Spring Boot y el desarrollo de algoritmos de aprendizaje de máquina con el uso de librerías de Python. Como pasatiempos o intereses personales me gusta el estudio de la teoría musical, hacer manualidades, cantar y jugar videojuegos.
 
