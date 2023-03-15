@@ -7,12 +7,12 @@ new p5((p) => {
     let radio;
   
     let lightnessModes = {
-      mean: (color) => {
+      intensity: (color) => {
         return (p.red(color) + p.green(color) + p.blue(color)) / 3;
       },
   
       hsv: (color) => {
-        return Math.max((p.red(color), p.green(color), p.blue(color)));
+        return Math.max((p.red(color), p.green(color), p.blue(color)))/0.255;
       },
   
       hsl: (color) => {
@@ -25,6 +25,17 @@ new p5((p) => {
         return (
           0.2126 * p.red(color) + 0.7152 * p.green(color) + 0.0722 * p.blue(color)
         );
+      },
+
+      perceived_luma: (color) =>{
+        return (
+            0.299 * p.red(color) + 0.587 * p.green(color) + 0.114 * p.blue(color)
+          );
+      },
+      perceived2_luma: (color) =>{
+        return (
+            Math.sqrt(0.299 * p.red(color)^2 + 0.587 * p.green(color)^2 + 0.114 * p.blue(color)^2)
+          );
       },
     };
   
@@ -54,16 +65,18 @@ new p5((p) => {
     };
   
     p.setup = () => {
-      originalImg.resize(500,500)
-      currentImg.resize(500,500)
-      p.createCanvas(500, 500);
+      originalImg.resize(600,600)
+      currentImg.resize(600,600)
+      p.createCanvas(600, 600);
   
       radio = p.createRadio();
       radio.option("none", "None");
-      radio.option("mean", "Mean");
+      radio.option("intensity", "Intensity");
       radio.option("hsv", "HSV");
       radio.option("hsl", "HSL");
       radio.option("luma", "Luma");
+      radio.option("perceived_luma", "Luma_per1");
+      radio.option("perceived2_luma", "Luma_per2");
       radio.selected("none");
   
       radio.changed(() => {
