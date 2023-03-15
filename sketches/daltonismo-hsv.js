@@ -1,43 +1,47 @@
 new p5((p) => {
-  let imgChosen = window.localStorage.getItem("imgChosen");
+  let imgChosen = null;
+  do {
+    imgChosen = window.localStorage.getItem("imgChosen");
+  } while (imgChosen == null)
+  
   let img; // Declare variable for image
 
-  p.preload = function() {
+  p.preload = function () {
     // Load an image
     img = p.loadImage(`/showcase/sketches/images/${imgChosen}hsv.png`);
   }
 
-  p.setup = function() {
+  p.setup = function () {
     // Create a canvas
     p.createCanvas(1400, 600);
     imgHeight = img.height * (p.width / 2) / img.width;
-    p.resizeCanvas(p.width, imgHeight*2 + 100);
+    p.resizeCanvas(p.width, imgHeight * 2 + 100);
     p.background(50, 60, 70);
 
     // Display original image
     p.textSize(20);
     p.fill(220);
     p.text("Visión normal", 10, 25);
-    p.image(img, 4, 30 + 4, p.width/2 - 5, imgHeight);
+    p.image(img, 4, 30 + 4, p.width / 2 - 5, imgHeight);
 
     // Display image for protanopia (red-green color blindness)
     let protanopiaImg = applyFilter('protanopia');
     p.textSize(20);
     p.fill(220);
     p.text("Protanopia", p.width / 2 + 10, 25);
-    p.image(protanopiaImg, p.width / 2 + 3, 30 + 4, p.width/2 - 6, imgHeight);
+    p.image(protanopiaImg, p.width / 2 + 3, 30 + 4, p.width / 2 - 6, imgHeight);
 
     // Display image for deuteranopia (red-green color blindness)
-    let deuteranopiaImg = applyFilter('deuteranopia');p.textSize(20);
+    let deuteranopiaImg = applyFilter('deuteranopia'); p.textSize(20);
     p.fill(220);
     p.text("Deuteranopia", 10, imgHeight + 75);
-    p.image(deuteranopiaImg, 4, imgHeight + 50 + 35, p.width/2 - 5, imgHeight);
+    p.image(deuteranopiaImg, 4, imgHeight + 50 + 35, p.width / 2 - 5, imgHeight);
 
     // Display image for tritanopia (blue-yellow color blindness)
     let tritanopiaImg = applyFilter('tritanopia');
     p.fill(220);
     p.text("Tritanopia", p.width / 2 + 10, imgHeight + 75);
-    p.image(tritanopiaImg, p.width / 2 + 3, imgHeight + 50 + 35,   p.width/2 - 6, imgHeight);
+    p.image(tritanopiaImg, p.width / 2 + 3, imgHeight + 50 + 35, p.width / 2 - 6, imgHeight);
   }
 
   function applyFilter(filterType) {

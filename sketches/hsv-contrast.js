@@ -1,5 +1,8 @@
 new p5((p) => {
-    let imgChosen = window.localStorage.getItem("imgChosen");
+    let imgChosen = null;
+    do {
+        imgChosen = window.localStorage.getItem("imgChosen");
+    } while (imgChosen == null)
     let img; // declare global variable for the image
 
     p.preload = function () {
@@ -45,7 +48,7 @@ new p5((p) => {
         correctedImg.updatePixels(); // update the pixels in the corrected image
 
         //Display the corrected image
-        p.image(correctedImg, p.width / 2 + 1, 2, p.width / 2 -3, imgHeight);
+        p.image(correctedImg, p.width / 2 + 1, 2, p.width / 2 - 3, imgHeight);
         p.textSize(20);
         p.fill(220);
         p.text("Imagen corregida (Contraste HSV)", p.width / 2 + 10, imgHeight + 20);
