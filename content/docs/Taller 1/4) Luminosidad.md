@@ -5,6 +5,18 @@ La luminosidad es la medida de intensidad lumínica por unidad de área de la lu
 La luminosidad de un color puede ser calculada a través de diferentes métodos tomando como base al modelo RGB.
 
 {{< tabs "uniqueid" >}}
+{{< tab "Intensidad" >}} 
+
+  {{< katex display>}}
+      L=\frac{R+G+B}{3}
+  {{< /katex >}}
+
+Al igual que otros modelos de color la intensidad es un elemento necesario para poder apreciar
+los colores de una buena forma. Sin embargo, esta fórmula no es perfecta, ya que la percepción
+de luminosidad puede variar según el contexto y la saturación del color. 
+
+
+{{< /tab >}}
 {{< tab "Luma" >}} 
 Luma es la componente que codifica la información de luminosidad de la imagen. En términos generales, es algo muy similar a la versión en blanco y negro de la imagen original. Esta se puede calcular a partir de componentes RGB lineales
 
