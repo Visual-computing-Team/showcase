@@ -145,10 +145,19 @@ Actualmente, no existe un tratamiento médico o quirúrgico para curar el dalton
 {{< /hint >}}
 
 
-## Aplicaciones de filtros 
-
-
 ## Conclusiones
+
+{{< hint info >}}
+    💠 Pese a no tener cura, el daltonismo se puede tratar de diversas formas.
+    En un medio digital, por ejemplo, se pueden aplicar filtros de color que 
+    mejoran la forma en como las personas con esta condición pueden ver. 
+    
+    💠 Estos modelos aplicados modifican la proporción en como se ven determinados 
+    colores, es decir, de los colores principales. Esto ayuda a dar un mejor 
+    constraste en la imagen con diferentes colores. 
+
+
+{{< /hint >}}
 
 
 ## Referencias

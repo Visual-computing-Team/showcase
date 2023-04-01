@@ -8,7 +8,7 @@ Es una percepción visual que se genera en el cerebro de los humanos y otros ani
 <div align="center">
 <img src="/showcase/sketches/basics/color.png">
 
-<font size="1" color="white"><i>Espectro visible [Imagen]. Extraída de https://es.wikipedia.org/wiki/Espectro_visible </i></font>
+<font size="1" color="white"><i>Imagen 1: Espectro visible [Imagen]. Extraída de https://es.wikipedia.org/wiki/Espectro_visible </i></font>
 </div>
 
 ### • 🖍️ Matiz o Hue 
@@ -19,7 +19,7 @@ El matiz se mide a lo largo de una escala circular, conocida como "rueda de colo
 <div align="center">
 <img src="/showcase/sketches/basics/matiz.png">
 
-<font size="1" color="white"><i>Exploring the real color wheel [Imagen]. Extraída de https://99designs.com/blog/tips/exploring-the-real-color-wheel-in-photoshop/ </i></font>
+<font size="1" color="white"><i>Imagen 2: Exploring the real color wheel [Imagen]. Extraída de https://99designs.com/blog/tips/exploring-the-real-color-wheel-in-photoshop/ </i></font>
 </div>
 
 {{< hint info >}}
@@ -27,7 +27,7 @@ El matiz se mide a lo largo de una escala circular, conocida como "rueda de colo
 <div align="center">
 <img src="/showcase/sketches/basics/matiz_amarillo.png" width = "60%">
 
-<font size="1" color="white"><i>Las propiedades del color: tono, luminosidad y saturación [Imagen]. Extraída de https://www.archipalettes.com/blog/las-propiedades-del-color </i></font>
+<font size="1" color="white"><i>Imagen 3: Las propiedades del color: tono, luminosidad y saturación [Imagen]. Extraída de https://www.archipalettes.com/blog/las-propiedades-del-color </i></font>
 </div>
 {{< /hint >}}
 
@@ -37,7 +37,7 @@ Es un término que se usa para describir que tan claro u oscuro parece un color,
 <div align="center">
 <img src="/showcase/sketches/basics/brillo.jpg">
 
-<font size="1" color="white"><i>Brightness [Imagen]. Extraída de http://artnet.nmu.edu/foundations/doku.php?id=brightness </i></font>
+<font size="1" color="white"><i>Imagen 4: Brightness [Imagen]. Extraída de http://artnet.nmu.edu/foundations/doku.php?id=brightness </i></font>
 </div>
 
 ### • 🌞 Luminosidad (lightness)
@@ -48,7 +48,7 @@ Es una propiedad importante, ya que va a crear sensaciones espaciales por medio 
 <div align="center">
 <img src="/showcase/sketches/basics/luminosidad.png">
 
-<font size="1" color="white"><i>Las propiedades del color: tono, luminosidad y saturación [Imagen]. Extraída de https://www.archipalettes.com/blog/las-propiedades-del-color </i></font>
+<font size="1" color="white"><i>Imagen 5: Las propiedades del color: tono, luminosidad y saturación [Imagen]. Extraída de https://www.archipalettes.com/blog/las-propiedades-del-color </i></font>
 </div>
 
 ### • 🤡 Saturación (saturation)
@@ -58,7 +58,7 @@ La saturación es la pureza de un color. Corresponde a la mezcla de blanco puro 
 <div align="center">
 <img src="/showcase/sketches/basics/saturacion.png">
 
-<font size="1" color="white"><i>Propiedades de los colores [Imagen]. Extraída de https://desarrolloweb.com/articulos/1503.php </i></font>
+<font size="1" color="white"><i>Imagen 6: Propiedades de los colores [Imagen]. Extraída de https://desarrolloweb.com/articulos/1503.php </i></font>
 </div>
 
 ## 🖼️ <b>HSV/HSB (Hue, Saturation, Value/Brightness)</b>
@@ -78,7 +78,7 @@ El modelo HSB (o HSV, como se prefiera) deriva del espacio RGB y representa los 
 <div align="center">
 <img src="/showcase/sketches/basics/HSV.png" width = "30%">
 
-<font size="1" color="white"><i>Triangulo HSV [Imagen]. Extraída de https://upload.wikimedia.org/wikipedia/commons/1/1b/Triangulo_HSV.png </i></font>
+<font size="1" color="white"><i>Imagen 7: Triangulo HSV [Imagen]. Extraída de https://upload.wikimedia.org/wikipedia/commons/1/1b/Triangulo_HSV.png </i></font>
 
 </div>
 {{< hint danger >}}
@@ -87,7 +87,7 @@ El <b>ángulo croma no líneal</b> se refiere a la forma en que el matiz se defi
 <div align="center">
 <img src="/showcase/sketches/basics/HSV Cono.png" width = "40%">
 
-<font size="1" color="white"><i>Cono de la coloración HSV [Imagen]. Extraída de https://es.wikipedia.org/wiki/Archivo:Cono_de_la_coloraci%C3%B3n_HSV.png </i></font>
+<font size="1" color="white"><i>Imagen 8: Cono de la coloración HSV [Imagen]. Extraída de https://es.wikipedia.org/wiki/Archivo:Cono_de_la_coloraci%C3%B3n_HSV.png </i></font>
 </div>
 {{< / hint >}}
 
@@ -123,7 +123,7 @@ Además, el modelo HSL también es utilizado en la creación de gradientes y efe
     <p
     style = "font-size:.6rem;
             text-align:center;
-        ">Variación del canal H [Imagen]. Extraída de <a>Colorimetry, 2nd Edition, Publication CIE No. 15.2. Commission Internationale de l'Eclairage.</a></p>
+        ">Imagen 9: Variación del canal H [Imagen]. Extraída de <a>Colorimetry, 2nd Edition, Publication CIE No. 15.2. Commission Internationale de l'Eclairage.</a></p>
 </div>
 {{< /tab >}}
 
@@ -147,7 +147,7 @@ Además, el modelo HSL también es utilizado en la creación de gradientes y efe
     <p
     style = "font-size:.6rem;
             text-align:center;
-        ">Variación del canal H [Imagen]. Extraída de <a>Colorimetry, 2nd Edition, Publication CIE No. 15.2. Commission Internationale de l'Eclairage.</a></p>
+        ">Imagen 10: Variación del canal H [Imagen]. Extraída de <a>Colorimetry, 2nd Edition, Publication CIE No. 15.2. Commission Internationale de l'Eclairage.</a></p>
 </div>
 {{< /tab >}}
 
@@ -170,7 +170,7 @@ Además, el modelo HSL también es utilizado en la creación de gradientes y efe
     <p
     style = "font-size:.6rem;
             text-align:center;
-        ">Variación del canal H [Imagen]. Extraída de <a>Colorimetry, 2nd Edition, Publication CIE No. 15.2. Commission Internationale de l'Eclairage.</a></p>
+        ">Imagen 11: Variación del canal H [Imagen]. Extraída de <a>Colorimetry, 2nd Edition, Publication CIE No. 15.2. Commission Internationale de l'Eclairage.</a></p>
 </div>
 {{< /tab >}}
 {{< /tabs >}}
@@ -183,7 +183,7 @@ Sin embargo, el color se puede dividir en tres partes: matiz, luminosidad y satu
 <div align="center">
 <img src="/showcase/sketches/basics/XYZ.png">
 
-<font size="1" color="white"><i>XYZ [Imagen]. Extraída de http://www.proyectacolor.cl/aplicacion-del-color/modelos-de-color/modelo-cie/#:~:text=El%20modelo%20CIE%20XYZ&text=El%20modelo%20CIE%20deriv%C3%B3%20de,X%2C%20Y%20y%20Z%20respectivamente </i></font>
+<font size="1" color="white"><i>Imagen 12: XYZ [Imagen]. Extraída de http://www.proyectacolor.cl/aplicacion-del-color/modelos-de-color/modelo-cie/#:~:text=El%20modelo%20CIE%20XYZ&text=El%20modelo%20CIE%20deriv%C3%B3%20de,X%2C%20Y%20y%20Z%20respectivamente </i></font>
 </div>
 
 ### 🔧 Uso
