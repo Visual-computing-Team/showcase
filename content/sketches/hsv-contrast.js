@@ -3,13 +3,20 @@ new p5((p) => {
     do {
         imgChosen = window.localStorage.getItem("imgChosen");
     } while (imgChosen == null)
+
+    let imgCookie = getCookieValue("photo");
+
     let img; // declare global variable for the image
 
     p.preload = function () {
-        img = p.loadImage(`/showcase/sketches/images/${imgChosen}.png`); // load the image
+        if (imgCookie != "")
+            img = p.loadImage(imgCookie, null, ()=>{location.reload()});
+        else
+            img = p.loadImage(`/showcase/sketches/images/${imgChosen}.png`);
     }
 
     p.setup = function () {
+        setInterval(checkCookieValue, 1000); // check the cookie value every second
         p.createCanvas(700, 600);
         imgHeight = img.height * (p.width / 2) / img.width;
 
@@ -52,6 +59,12 @@ new p5((p) => {
         p.textSize(20);
         p.fill(220);
         p.text("Imagen corregida (Contraste HSV)", p.width / 2 + 10, imgHeight + 20);
+
+        //save image in localstorage
+
+        imgClone = correctedImg.get();
+        let imgData = p.getImageData(imgClone);
+        localStorage.setItem("photohsv", imgData);
     }
 
     // helper functions to convert between RGB and HSV color spaces
@@ -205,5 +218,29 @@ new p5((p) => {
         return result;
     }
 
+    function getCookieValue(cookieName) {
+        const cookies = document.cookie.split(";"); // split the cookie string into an array of cookies
+        for (let i = 0; i < cookies.length; i++) {   // loop through the cookies array
+            const cookie = cookies[i].trim();         // get the current cookie and remove any leading or trailing spaces
+            if (cookie.startsWith(cookieName + "=")) {  // check if the cookie starts with the name we're looking for
+                return cookie.substring(cookieName.length + 1, cookie.length);  // return the value of the cookie
+            }
+        }
+        return "";  // return an empty string if the cookie is not found
+    }
+
+    function checkCookieValue() {
+        let newCookieValue = getCookieValue("photo");
+        let newimgChosen = window.localStorage.getItem("imgChosen");
+        if (newCookieValue !== imgCookie || newimgChosen != imgChosen) {
+            window.location.reload(); // reload the page if the cookie value has changed
+        }
+    }
+
+    p.getImageData = function (image) {
+        // get the image data as a Base64-encoded string
+        let imgData = image.canvas.toDataURL();
+        return imgData;
+    }
 
 }, "hsvcontrast");

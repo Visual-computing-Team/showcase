@@ -4,16 +4,22 @@ new p5((p) => {
     imgChosen = window.localStorage.getItem("imgChosen");
   } while (imgChosen == null)
   
+  let imgStorage = window.localStorage.getItem("photohsv");
+
   let img; // Declare variable for image
 
   p.preload = function () {
     // Load an image
-    img = p.loadImage(`/showcase/sketches/images/${imgChosen}hsv.png`);
+    if(imgStorage != null)
+      img = p.loadImage(imgStorage);
+    else
+      img = p.loadImage(`/showcase/sketches/images/${imgChosen}.png`);
   }
 
   p.setup = function () {
+    setInterval(checkStorageValue, 1000); // check the storage value every second
     // Create a canvas
-    p.createCanvas(1400, 600);
+    p.createCanvas(700, 600);
     imgHeight = img.height * (p.width / 2) / img.width;
     p.resizeCanvas(p.width, imgHeight * 2 + 100);
     p.background(50, 60, 70);
@@ -84,6 +90,13 @@ new p5((p) => {
     // Update the filtered image's pixels and return it
     filteredImg.updatePixels();
     return filteredImg;
+  }
+
+  function checkStorageValue() {
+    let newCookieValue = window.localStorage.getItem("photohsv");
+    if (newCookieValue !== imgStorage) {
+      window.location.reload(); // reload the page if the cookie value has changed
+    }
   }
 
 }, "daltonismo");
