@@ -4,16 +4,21 @@ new p5((p) => {
     imgChosen = window.localStorage.getItem("imgChosen");
   } while (imgChosen == null)
 
+  let imgStorage = window.localStorage.getItem("photorgb");
   let img; // Declare variable for image
 
   p.preload = function () {
     // Load an image
-    img = p.loadImage(`/showcase/sketches/images/${imgChosen}rgb.png`);
+    if(imgStorage != null)
+      img = p.loadImage(imgStorage);
+    else
+      img = p.loadImage(`/showcase/sketches/images/${imgChosen}.png`);
   }
 
   p.setup = function () {
+    setInterval(checkStorageValue, 1000); // check the storage value every second
     // Create a canvas
-    p.createCanvas(1400, 600);
+    p.createCanvas(700, 600);
     imgHeight = img.height * (p.width / 2) / img.width;
     p.resizeCanvas(p.width, imgHeight * 2 + 100);
     p.background(50, 60, 70);
@@ -84,6 +89,24 @@ new p5((p) => {
     // Update the filtered image's pixels and return it
     filteredImg.updatePixels();
     return filteredImg;
+  }
+
+  function getCookieValue(cookieName) {
+    const cookies = document.cookie.split(";"); // split the cookie string into an array of cookies
+    for (let i = 0; i < cookies.length; i++) {   // loop through the cookies array
+      const cookie = cookies[i].trim();         // get the current cookie and remove any leading or trailing spaces
+      if (cookie.startsWith(cookieName + "=")) {  // check if the cookie starts with the name we're looking for
+        return cookie.substring(cookieName.length + 1, cookie.length);  // return the value of the cookie
+      }
+    }
+    return "";  // return an empty string if the cookie is not found
+  }
+
+  function checkStorageValue() {
+    let newCookieValue = window.localStorage.getItem("photorgb");
+    if (newCookieValue !== imgStorage) {
+      window.location.reload(); // reload the page if the cookie value has changed
+    }
   }
 
 }, "daltonismo");
