@@ -18,9 +18,11 @@ new p5((p) => {
     p.createCanvas(400, 400, p.WEBGL);
     p.noLoop();
 
+    // Crea un botón para cambiar la imagen y el efecto
     toggleButton = p.createButton('Cambiar imagen y efecto');
     toggleButton.mousePressed(changeImageAndEffect);
 
+    // Crea un slider para cambiar el intervalo del setInterval
     intervalSlider = p.createSlider(1, 1000, interval, 10);
     intervalSlider.input(changeInterval);
 
@@ -32,8 +34,11 @@ new p5((p) => {
     }
     
     originalImg = p.createImg('');
+
+
   };
 
+  // Carga una imagen aleatoria y aplica el efecto actual
   function loadImageAndApplyEffect() {
     let randomNum = Math.floor(p.random(0, 40));
     let imagePath = '/showcase/sketches/historical_img/' + String(randomNum) + '.jpg';
@@ -42,6 +47,7 @@ new p5((p) => {
       img = loadedImg;
       originalImg.elt.src = imagePath; // Establece la ruta de la imagen original
       originalImg.size(200, 200); // Establece el tamaño de la imagen original
+      originalImg.position(410, 0); // Establece la posición de la imagen original
       p.background(255);
       p.redraw();
     });
@@ -62,6 +68,7 @@ new p5((p) => {
     currentEffect = 'zoom';
   }
 
+  // Dibuja la escena
    function draw()  {
     if (!img) return;
 
@@ -77,6 +84,7 @@ new p5((p) => {
       shaderProgram.setUniform('u_zoomAmount', 1.5);
     }
 
+    // Dibuja un cuadrado con los vértices generados
     p.beginShape();
     for (let i = 0; i < 4; i++) {
       let vertexData = vertices[i];
