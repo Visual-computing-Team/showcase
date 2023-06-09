@@ -33,6 +33,7 @@ new p5((p) => {
     }
   }
 
+  //Efecto de partición de imagen
   function applyEffect1() {
     img.resize(400, 400);
     p.image(img, 0, 0);
@@ -44,6 +45,7 @@ new p5((p) => {
     }
   }
 
+  //Efecto de partículas de la imagen
   function applyEffect2() {
     img.resize(p.width, p.height);
     p.image(img, 0, 0);
@@ -58,6 +60,7 @@ new p5((p) => {
     }
   }
 
+  //Efecto de curvas y reconstrucción de la imagen
   function applyEffect3() {
     let resultImg = p.createGraphics(img.width, img.height);
 
@@ -86,6 +89,7 @@ new p5((p) => {
     p.image(resultImg, 0, 0);
   }
 
+  //Interactividad con el canvas
   function keyPressed(event) {
     if (event.keyCode === 49) { // Tecla "1"
       effectIndex = 0;

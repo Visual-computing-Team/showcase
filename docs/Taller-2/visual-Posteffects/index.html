@@ -1,13 +1,468 @@
-<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content=" Visual posteffects # "><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content=" Visual posteffects # "><meta property="og:type" content="article"><meta property="og:url" content="https://Visual-computing-Team/showcase/docs/Taller-2/visual-Posteffects/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-08T01:56:45-05:00"><title>Visual Posteffects | Showcase visual computing team</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
+<!doctype html><html lang=en-us dir=ltr><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="Visual posteffects # Consigna Implemente algunos post efectos que encuentre interesantes Qué es un post efecto? 📕 # Un post efecto es, precisamente, un efecto que se aplica a la imagen final, una vez que se han renderizado todos los objetos de la escena. Estos efectos se usan para varios fines, sin embargo el que más sobresale es el de resaltar ciertos aspectos de la escena, como por ejemplo, el resaltar los bordes de los objetos o el resaltar ciertos colores del renderizado final."><meta name=theme-color content="#FFFFFF"><meta name=color-scheme content="light dark"><meta property="og:title" content><meta property="og:description" content="Visual posteffects # Consigna Implemente algunos post efectos que encuentre interesantes Qué es un post efecto? 📕 # Un post efecto es, precisamente, un efecto que se aplica a la imagen final, una vez que se han renderizado todos los objetos de la escena. Estos efectos se usan para varios fines, sin embargo el que más sobresale es el de resaltar ciertos aspectos de la escena, como por ejemplo, el resaltar los bordes de los objetos o el resaltar ciertos colores del renderizado final."><meta property="og:type" content="article"><meta property="og:url" content="https://Visual-computing-Team/showcase/docs/Taller-2/visual-Posteffects/"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2023-06-09T18:33:28-05:00"><title>Visual Posteffects | Showcase visual computing team</title><link rel=manifest href=/showcase/manifest.json><link rel=icon href=/showcase/favicon.png type=image/x-icon><link rel=stylesheet href=/showcase/book.min.4b35fed0bea034bbc19c89c71e14b73fb9c68cfcc586b9382adfb9b7b103ba06.css integrity="sha256-SzX+0L6gNLvBnInHHhS3P7nGjPzFhrk4Kt+5t7EDugY=" crossorigin=anonymous><script defer src=/showcase/flexsearch.min.js></script>
 <script defer src=/showcase/en.search.min.3a8d658c77eb93c7f12a2b8af49a700131e474f288eefb605d9fa61576dbe5a7.js integrity="sha256-Oo1ljHfrk8fxKiuK9JpwATHkdPKI7vtgXZ+mFXbb5ac=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
 <input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/showcase/><span>Showcase visual computing team</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><a href=/showcase/docs/Equipo/>Equipo</a><ul></ul></li><li class=book-section-flat><span>Taller 1</span><ul><li><a href=/showcase/docs/Taller-1/1-Marco-te%C3%B3rico/>1) Marco Teórico</a></li><li><a href=/showcase/docs/Taller-1/2-Daltonismo/>2) Daltonismo</a></li><li><a href=/showcase/docs/Taller-1/3-Aplicaciones-con-daltonismo/>3) Aplicaciones Con Daltonismo</a></li><li><a href=/showcase/docs/Taller-1/4-Luminosidad/>4) Luminosidad</a></li></ul></li><li class=book-section-flat><span>Taller 2</span><ul><li><a href=/showcase/docs/Taller-2/PhotoMosaic/>Photo Mosaic</a></li><li><a href=/showcase/docs/Taller-2/visual-Posteffects/ class=active>Visual Posteffects</a></li></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/showcase/svg/menu.svg class=book-icon alt=Menu></label>
 <strong>Visual Posteffects</strong>
-<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><ul><li><a href=#visual-posteffects>Visual posteffects</a></li></ul></li></ul></nav></aside></header><article class=markdown><h2 id=visual-posteffects>Visual posteffects
-<a class=anchor href=#visual-posteffects>#</a></h2><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+<label for=toc-control><img src=/showcase/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav id=TableOfContents><ul><li><a href=#visual-posteffects>Visual posteffects</a><ul><li><a href=#qué-es-un-post-efecto->Qué es un post efecto? 📕</a></li><li><a href=#aplicación-de-post-efectos->Aplicación de post efectos 🎨</a><ul><li><a href=#post-efectos-con-software->Post efectos con software 🖥️</a></li><li><a href=#post-efectos-con-shaders->Post efectos con shaders 🎨</a></li><li><a href=#post-efecto-con-software-y-shaders>Post efecto con software y shaders</a></li></ul></li></ul></li></ul></nav></aside></header><article class=markdown><h1 id=visual-posteffects>Visual posteffects
+<a class=anchor href=#visual-posteffects>#</a></h1><blockquote class="book-hint danger"><b>Consigna</b>
+Implemente algunos post efectos que encuentre interesantes</blockquote><h2 id=qué-es-un-post-efecto->Qué es un post efecto? 📕
+<a class=anchor href=#qu%c3%a9-es-un-post-efecto->#</a></h2><p>Un post efecto es, precisamente, un efecto que se aplica a la imagen final, una vez que se han renderizado todos los objetos de la escena. Estos efectos se usan para varios fines, sin embargo el que más sobresale es el de resaltar ciertos aspectos de la escena, como por ejemplo, el resaltar los bordes de los objetos o el resaltar ciertos colores del renderizado final.</p><p>Algunos de los post efectos más comunes son:</p><blockquote class="book-hint info"><ol><li><p><strong>Vignette</strong>: Este efecto se usa para oscurecer los bordes de la imagen, para darle un efecto de viñeta. Este efecto se usa mucho en juegos de terror, para darle un efecto de misterio a la escena.</p></li><li><p><strong>Zoom</strong> : Este efecto se usa para acercar la imagen a cierta parte en específico o para hacerla ver más grande en cierta zona como tal. Este efecto tiene varios usos, uno de los más comunes es cuando se quiere implementar el efecto de lupa, usado tanto en juegos como en aplicaciones.</p></li><li><p><strong>Blur</strong>: Este efecto da desenfoque a la imagen, distorsionando la imagen original y haciendola menos visible y más borrosa. Este efecto se asemeja al desenfoque se genera cuando se toma una foto con una cámara, y se usa para darle un efecto de movimiento a la imagen.</p></li><li><p><strong>Filtros de color</strong>: Este efecto se usa para cambiar el color de la imagen, añadiendo o restando nitidiez, o incluso poniendo la imagen con cierta paleta de colores.</p></li><li><p><strong>Ajuste de perspectiva</strong>: Este efecto se usa para cambiar la perspectiva de la imagen, haciendo que se vea desde un punto de vista diferente, o incluso desde un punto de vista más alto o más bajo.</p></li></ol></blockquote><h2 id=aplicación-de-post-efectos->Aplicación de post efectos 🎨
+<a class=anchor href=#aplicaci%c3%b3n-de-post-efectos->#</a></h2><p>Para poder ver la diferencia entre un post efecto realizado con software y uno con shaders, se implementaron dos proyectos. Cada uno con su respectivo procesamiento.</p><h3 id=post-efectos-con-software->Post efectos con software 🖥️
+<a class=anchor href=#post-efectos-con-software->#</a></h3><p>En el ejemplo que se ve a continuación se ven tres post efectos realizados. Principalmente son post efectos personalizados por lo cual no tienen un nombre en específico. Estos son:</p><div class=book-tabs><input type=radio class=toggle name="tabs-Efectos con software" id="tabs-Efectos con software-0" checked>
+<label for="tabs-Efectos con software-0">Partición de la imagen</label><div class="book-tabs-content markdown-inner"><pre><code>En este post efecto se divide la imagen en forma de tiras y se 
+redistribuye de forma vertical de tal forma que 
+la imagen se vea partida.
+</code></pre></div><input type=radio class=toggle name="tabs-Efectos con software" id="tabs-Efectos con software-1">
+<label for="tabs-Efectos con software-1">Partículas</label><div class="book-tabs-content markdown-inner"><pre><code>En este efecto, parte de la imagen se muestra en forma de partículas 
+lo cual distorsiona la imagen original.
+</code></pre></div><input type=radio class=toggle name="tabs-Efectos con software" id="tabs-Efectos con software-2">
+<label for="tabs-Efectos con software-2">curvas</label><div class="book-tabs-content markdown-inner"><pre><code>En este efecto se puede apreciar como la imagen se rehace en forma de 
+curvas, es decir, se crean pequeñas curvilíneas que forman la imagen 
+original.
+</code></pre></div></div><p>Cabe mencionar que estos efectos, al estar hechos con software, toman mucho tiempo en renderizar ya que en todos
+se debe recorrer la imagen píxel por píxel para aplicar la transforamción correspondiente.</p><blockquote class="book-hint warning"><pre><code>Para poder ver los efectos, debe oprimir las siguientes teclas:
+    💠 1: Partición de la imagen
+    💠 2: Partículas
+    💠 3: Curvas
+</code></pre></blockquote><p><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
-<script src=/showcase/sketches/software_posteffects.js></script><div id=software_posteffects></div><div style=display:flex;flex-direction:column;width:400px><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+<script src=/showcase/sketches/software_posteffects.js></script><div id=software_posteffects></div><details><summary>Post efectos con software</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>new</span> <span style=color:#a6e22e>p5</span>((<span style=color:#a6e22e>p</span>) =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>img</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>canvas</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>effectIndex</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#75715e>// Variable para controlar el efecto activo
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>preload</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadImage</span>(<span style=color:#e6db74>&#39;/showcase/sketches/img_soft/shitzu_lindo.jpg&#39;</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>resize</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>noLoop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>220</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>img</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>switch</span> (<span style=color:#a6e22e>effectIndex</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>0</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>applyEffect1</span>();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>1</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>applyEffect2</span>();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>case</span> <span style=color:#ae81ff>2</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>applyEffect3</span>();
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>default</span><span style=color:#f92672>:</span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>break</span>;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Efecto de partición de imagen
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyEffect1</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>resize</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>img</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>width</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>+=</span> <span style=color:#ae81ff>10</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>stripeXPosition</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#66d9ef>int</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>0</span>, <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span> <span style=color:#f92672>-</span> <span style=color:#ae81ff>10</span>));
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>stripeX</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>get</span>(<span style=color:#a6e22e>stripeXPosition</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>10</span>, <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>stripeX</span>, <span style=color:#a6e22e>i</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Efecto de partículas de la imagen
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyEffect2</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>resize</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>width</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>img</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>range</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>250</span>;
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>height</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>j</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>j</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>width</span>; <span style=color:#a6e22e>j</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>const</span> <span style=color:#a6e22e>pixelColor</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>get</span>(<span style=color:#a6e22e>i</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#a6e22e>range</span>), <span style=color:#a6e22e>j</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#a6e22e>range</span>));
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>stroke</span>(<span style=color:#a6e22e>pixelColor</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>point</span>(<span style=color:#a6e22e>i</span>, <span style=color:#a6e22e>j</span>);
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Efecto de curvas y reconstrucción de la imagen
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyEffect3</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>resultImg</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createGraphics</span>(<span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span>, <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>height</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>col</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>col</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>width</span>; <span style=color:#a6e22e>col</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>row</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>row</span> <span style=color:#f92672>&lt;</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>height</span>; <span style=color:#a6e22e>row</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>xPos</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#a6e22e>col</span>);
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>yPos</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#a6e22e>row</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>        <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>c</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>img</span>.<span style=color:#a6e22e>get</span>(<span style=color:#a6e22e>xPos</span>, <span style=color:#a6e22e>yPos</span>);
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>resultImg</span>.<span style=color:#a6e22e>noFill</span>();
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>resultImg</span>.<span style=color:#a6e22e>strokeWeight</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>5</span>));
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>resultImg</span>.<span style=color:#a6e22e>stroke</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>color</span>(<span style=color:#a6e22e>c</span>));
+</span></span><span style=display:flex><span>        <span style=color:#a6e22e>resultImg</span>.<span style=color:#a6e22e>curve</span>(
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>xPos</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>160</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>yPos</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>90</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>xPos</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>90</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>yPos</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>160</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>xPos</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>160</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>yPos</span> <span style=color:#f92672>+</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>90</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>xPos</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>90</span>),
+</span></span><span style=display:flex><span>          <span style=color:#a6e22e>yPos</span> <span style=color:#f92672>-</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>160</span>)
+</span></span><span style=display:flex><span>        );
+</span></span><span style=display:flex><span>      }
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>image</span>(<span style=color:#a6e22e>resultImg</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Interactividad con el canvas
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>keyPressed</span>(<span style=color:#a6e22e>event</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>keyCode</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>49</span>) { <span style=color:#75715e>// Tecla &#34;1&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>effectIndex</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>redraw</span>();
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>keyCode</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>50</span>) { <span style=color:#75715e>// Tecla &#34;2&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>effectIndex</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>redraw</span>();
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>event</span>.<span style=color:#a6e22e>keyCode</span> <span style=color:#f92672>===</span> <span style=color:#ae81ff>51</span>) { <span style=color:#75715e>// Tecla &#34;3&#34;
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>effectIndex</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>2</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>redraw</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>preload</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>preload</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>setup</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setup</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>draw</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>draw</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>keyPressed</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>keyPressed</span>;
+</span></span><span style=display:flex><span>}, <span style=color:#e6db74>&#34;software_posteffects&#34;</span>);
+</span></span></code></pre></div></div></details></p><h3 id=post-efectos-con-shaders->Post efectos con shaders 🎨
+<a class=anchor href=#post-efectos-con-shaders->#</a></h3><p>Ahora veremos la gran diferencia que tienen los post efectos a la hora de aplicarlos con shaders. En este caso, se implementaron tres post efectos, los cuales son:</p><div class=book-tabs><input type=radio class=toggle name="tabs-Efectos con shaders" id="tabs-Efectos con shaders-0" checked>
+<label for="tabs-Efectos con shaders-0">Blur</label><div class="book-tabs-content markdown-inner"><pre><code>En este post efecto se aplica un blur a la imagen
+,es decir, se distorsiona la imagen original y se 
+le da un efecto de desenfoque.
+</code></pre></div><input type=radio class=toggle name="tabs-Efectos con shaders" id="tabs-Efectos con shaders-1">
+<label for="tabs-Efectos con shaders-1">Vignette</label><div class="book-tabs-content markdown-inner"><pre><code>En este post efecto se aplica un vignette a la 
+imagen, es decir, se oscurecen los bordes de 
+la imagen y se le da un efecto de viñeta.
+</code></pre></div><input type=radio class=toggle name="tabs-Efectos con shaders" id="tabs-Efectos con shaders-2">
+<label for="tabs-Efectos con shaders-2">Zoom</label><div class="book-tabs-content markdown-inner"><pre><code>En este post efecto se aplica un efecto de zoom a la imagen
+, es decir, se acerca la imagen a cierta parte de la misma.
+</code></pre></div></div><p>Como se sabe los shader.frag se ejecutan por cada pixel de la imagen, por lo cual, el tiempo de renderizado es mucho menor que el de los post efectos con software.</p><blockquote class="book-hint warning"><pre><code>Para poder ver los efectos, debe oprimir el 
+botón &quot;Cambiar efecto.&quot;
+</code></pre></blockquote><div style=display:flex;flex-direction:column;width:400px;margin-bottom:20px><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
-<script src=/showcase/sketches/shaders_post.js></script><div id=shaders_post></div></div><div style=display:flex;flex-direction:row;width:400px><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
+<script src=/showcase/sketches/shaders_post.js></script><div id=shaders_post></div></div><details><summary>Post efectos con shaders</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span><span style=color:#66d9ef>new</span> <span style=color:#a6e22e>p5</span>((<span style=color:#a6e22e>p</span>) =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>img</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shaderProgram</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;vignette&#39;</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>toggleButton</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>canvas</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Carga los shaders
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>preload</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/unfocus.frag&#39;</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Creación del canvas y del botón
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>canvas</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>WEBGL</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>toggleButton</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createButton</span>(<span style=color:#e6db74>&#39;Cambiar efecto&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>toggleButton</span>.<span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>toggleEffect</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>noLoop</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>//Carga la imagen y redibuja la imagen con el nuevo efecto 
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>loadImageAndApplyEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadImage</span>(<span style=color:#e6db74>&#39;https://upload.wikimedia.org/wikipedia/commons/3/30/Shih-Tzu.JPG&#39;</span>, <span style=color:#66d9ef>function</span> (<span style=color:#a6e22e>loadedImg</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>img</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>loadedImg</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>redraw</span>();
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Aplica el efecto de viñeta
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyVignetteEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/vignette.frag&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;vignette&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>loadImageAndApplyEffect</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Aplica el efecto de desenfoque
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyUnfocusEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/unfocus.frag&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;unfocus&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>loadImageAndApplyEffect</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Aplica el efecto de zoom
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyZoomEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/zoom.frag&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;zoom&#39;</span>;
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>loadImageAndApplyEffect</span>();
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Dibuja la imagen con el efecto seleccionado
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>img</span>) <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderProgram</span>);
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Envía la imagen al shader
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_texture&#39;</span>, <span style=color:#a6e22e>img</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Ajusta los valores de los uniformes según el efecto
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;vignette&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_radius&#39;</span>, <span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_softness&#39;</span>, <span style=color:#ae81ff>0.2</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;unfocus&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_blurAmount&#39;</span>, <span style=color:#ae81ff>0.02</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;zoom&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_zoomAmount&#39;</span>, <span style=color:#ae81ff>1.5</span>); <span style=color:#75715e>// Ajusta el valor de zoom aquí
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Dibuja un rectángulo que ocupa toda la pantalla
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>vertex</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>1</span>, <span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>vertex</span>(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>vertex</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>1</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>endShape</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>CLOSE</span>);
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Cambia el efecto activo
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>toggleEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;vignette&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>applyUnfocusEffect</span>();
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;unfocus&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>applyZoomEffect</span>();
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>applyVignetteEffect</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>preload</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>preload</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>setup</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setup</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>draw</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>draw</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadImageAndApplyEffect</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>loadImageAndApplyEffect</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>loadImageAndApplyEffect</span>();
+</span></span><span style=display:flex><span>}, <span style=color:#e6db74>&#34;shaders_post&#34;</span> );
+</span></span></code></pre></div></div></details><details><summary>Unfocus shader</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-glsl data-lang=glsl><span style=display:flex><span><span style=color:#66d9ef>precision</span> <span style=color:#66d9ef>mediump</span> <span style=color:#66d9ef>float</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>uniform</span> <span style=color:#66d9ef>sampler2D</span> u_texture;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>varying</span> <span style=color:#66d9ef>vec2</span> vTexCoord;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#66d9ef>float</span> blurAmount <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.02</span>; <span style=color:#75715e>// Ajusta el valor para controlar la intensidad del desenfoque</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> main() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>vec4</span> color <span style=color:#f92672>=</span> <span style=color:#66d9ef>vec4</span>(<span style=color:#ae81ff>0.0</span>);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Aplica el desenfoque mediante el muestreo de múltiples píxeles vecinos</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>float</span> i <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>4.0</span>; i <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>4.0</span>; i <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1.0</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>float</span> j <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>4.0</span>; j <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>4.0</span>; j <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1.0</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>vec2</span> offset <span style=color:#f92672>=</span> <span style=color:#66d9ef>vec2</span>(i, j) <span style=color:#f92672>*</span> blurAmount;
+</span></span><span style=display:flex><span>      color <span style=color:#f92672>+=</span> texture2D(u_texture, vTexCoord <span style=color:#f92672>+</span> offset);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Calcula el color promedio y asigna el resultado final</span>
+</span></span><span style=display:flex><span>  color <span style=color:#f92672>/=</span> <span style=color:#ae81ff>81.0</span>; <span style=color:#75715e>// Dividir por la cantidad de píxeles muestreados</span>
+</span></span><span style=display:flex><span>  gl_FragColor <span style=color:#f92672>=</span> color;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><details><summary>Vignette shader</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-glsl data-lang=glsl><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>// Fragment shader para el efecto de viñeta</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>precision</span> <span style=color:#66d9ef>mediump</span> <span style=color:#66d9ef>float</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>uniform</span> <span style=color:#66d9ef>sampler2D</span> u_texture;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>varying</span> <span style=color:#66d9ef>vec2</span> vTexCoord;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#66d9ef>vec2</span> center <span style=color:#f92672>=</span> <span style=color:#66d9ef>vec2</span>(<span style=color:#ae81ff>0.5</span>, <span style=color:#ae81ff>0.5</span>); <span style=color:#75715e>// Coordenadas del centro de la imagen</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#66d9ef>float</span> radius <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.5</span>; <span style=color:#75715e>// Radio de la viñeta</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>const</span> <span style=color:#66d9ef>float</span> softness <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.2</span>; <span style=color:#75715e>// Suavidad del borde de la viñeta</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> main() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>vec2</span> distance <span style=color:#f92672>=</span> vTexCoord <span style=color:#f92672>-</span> center;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>float</span> vignette <span style=color:#f92672>=</span> smoothstep(radius, radius <span style=color:#f92672>-</span> softness, length(distance));
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>vec4</span> color <span style=color:#f92672>=</span> texture2D(u_texture, vTexCoord);
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Aplica el efecto de viñeta multiplicando el color por el factor de viñeta</span>
+</span></span><span style=display:flex><span>  gl_FragColor <span style=color:#f92672>=</span> color <span style=color:#f92672>*</span> <span style=color:#66d9ef>vec4</span>(vignette);
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><details><summary>Zoom shader</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-glsl data-lang=glsl><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>#ifdef GL_ES</span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>precision</span> <span style=color:#66d9ef>mediump</span> <span style=color:#66d9ef>float</span>;
+</span></span><span style=display:flex><span><span style=color:#75715e>#endif</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>uniform</span> <span style=color:#66d9ef>sampler2D</span> u_texture;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>uniform</span> <span style=color:#66d9ef>float</span> u_blurAmount;
+</span></span><span style=display:flex><span><span style=color:#66d9ef>uniform</span> <span style=color:#66d9ef>float</span> u_zoomAmount;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>varying</span> <span style=color:#66d9ef>vec2</span> vTexCoord;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>void</span> main() {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>vec2</span> blurredTexCoord <span style=color:#f92672>=</span> vTexCoord <span style=color:#f92672>+</span> u_blurAmount;
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Aplica el efecto de zoom</span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>vec2</span> zoomedTexCoord <span style=color:#f92672>=</span> (blurredTexCoord <span style=color:#f92672>-</span> <span style=color:#ae81ff>0.5</span>) <span style=color:#f92672>/</span> u_zoomAmount <span style=color:#f92672>+</span> <span style=color:#ae81ff>0.5</span>;
+</span></span><span style=display:flex><span>  
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>vec4</span> color <span style=color:#f92672>=</span> <span style=color:#66d9ef>vec4</span>(<span style=color:#ae81ff>0.0</span>);
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>float</span> totalWeight <span style=color:#f92672>=</span> <span style=color:#ae81ff>0.0</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>float</span> dx <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>2.0</span>; dx <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>2.0</span>; dx <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1.0</span>) {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>float</span> dy <span style=color:#f92672>=</span> <span style=color:#f92672>-</span><span style=color:#ae81ff>2.0</span>; dy <span style=color:#f92672>&lt;=</span> <span style=color:#ae81ff>2.0</span>; dy <span style=color:#f92672>+=</span> <span style=color:#ae81ff>1.0</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>vec2</span> offset <span style=color:#f92672>=</span> <span style=color:#66d9ef>vec2</span>(dx, dy) <span style=color:#f92672>*</span> u_blurAmount;
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>vec4</span> sampleColor <span style=color:#f92672>=</span> texture2D(u_texture, zoomedTexCoord <span style=color:#f92672>+</span> offset);
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>float</span> weight <span style=color:#f92672>=</span> <span style=color:#ae81ff>1.0</span> <span style=color:#f92672>-</span> length(offset) <span style=color:#f92672>/</span> <span style=color:#ae81ff>2.8284</span>; <span style=color:#75715e>// Gaussian-like weight</span>
+</span></span><span style=display:flex><span>      color <span style=color:#f92672>+=</span> sampleColor <span style=color:#f92672>*</span> weight;
+</span></span><span style=display:flex><span>      totalWeight <span style=color:#f92672>+=</span> weight;
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  gl_FragColor <span style=color:#f92672>=</span> color <span style=color:#f92672>/</span> totalWeight;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div></div></details><h3 id=post-efecto-con-software-y-shaders>Post efecto con software y shaders
+<a class=anchor href=#post-efecto-con-software-y-shaders>#</a></h3><p>Sin embargo, a pesar de las diferencias entre los dos tipos de implementación de un post efecto, estos pueden relacionarse armoniosamente en varios aplicaciones.</p><p>Para este post efecto se implementa los mismos post efectos con shaders, no obstante, por el lado del software se implementa un efecto en donde se juega con los vertices de la imagen, permitiendo de esta manera su reconstrucción. Cómo se puede ver más adelante:</p><blockquote class="book-hint warning"><pre><code>Para poder ver los efectos, debe oprimir el 
+botón &quot;Cambiar imagen y efecto. Puede jugar con el 
+slider para acelarar o desacelerar la construcción
+de la imagen&quot;
+</code></pre></blockquote><div style=display:flex;flex-direction:column;width:400px;position:relative;margin-bottom:20px><script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.min.js></script>
 <script src=https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js></script>
-<script src=/showcase/sketches/shader_soft.js></script><div id=shader_soft></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/62f95d656efeab0416fe3a25dad8c7c8174e780c title='Last modified by Trianon27 | June 8, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
-<span>June 8, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><ul><li><a href=#visual-posteffects>Visual posteffects</a></li></ul></li></ul></nav></div></aside></main></body></html>
+<script src=/showcase/sketches/shader_soft.js></script><div id=shader_soft></div></div><details><summary>Shader and software code</summary><div class=markdown-inner><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-js data-lang=js><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#66d9ef>new</span> <span style=color:#a6e22e>p5</span>((<span style=color:#a6e22e>p</span>) =&gt; {
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>img</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>originalImg</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>shaderProgram</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;vignette&#39;</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>toggleButton</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>intervalSlider</span>;
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>intervalId</span>; <span style=color:#75715e>// Variable para almacenar el ID del intervalo
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>vertices</span> <span style=color:#f92672>=</span> [];
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>interval</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>1000</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>preload</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader_v_p.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/vignette.frag&#39;</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>setup</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createCanvas</span>(<span style=color:#ae81ff>400</span>, <span style=color:#ae81ff>400</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>WEBGL</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>noLoop</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Crea un botón para cambiar la imagen y el efecto
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>toggleButton</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createButton</span>(<span style=color:#e6db74>&#39;Cambiar imagen y efecto&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>toggleButton</span>.<span style=color:#a6e22e>mousePressed</span>(<span style=color:#a6e22e>changeImageAndEffect</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Crea un slider para cambiar el intervalo del setInterval
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>intervalSlider</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createSlider</span>(<span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1000</span>, <span style=color:#a6e22e>interval</span>, <span style=color:#ae81ff>10</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>intervalSlider</span>.<span style=color:#a6e22e>input</span>(<span style=color:#a6e22e>changeInterval</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>intervalId</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setInterval</span>(<span style=color:#a6e22e>changeVertexValues</span>, <span style=color:#a6e22e>interval</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Inicializa los vértices del dibujo con valores aleatorios
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>4</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>vertices</span>.<span style=color:#a6e22e>push</span>([<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>), <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>)]);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>originalImg</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>createImg</span>(<span style=color:#e6db74>&#39;&#39;</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Carga una imagen aleatoria y aplica el efecto actual
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>loadImageAndApplyEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>randomNum</span> <span style=color:#f92672>=</span> Math.<span style=color:#a6e22e>floor</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#ae81ff>0</span>, <span style=color:#ae81ff>40</span>));
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>imagePath</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;/showcase/sketches/historical_img/&#39;</span> <span style=color:#f92672>+</span> String(<span style=color:#a6e22e>randomNum</span>) <span style=color:#f92672>+</span> <span style=color:#e6db74>&#39;.jpg&#39;</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadImage</span>(<span style=color:#a6e22e>imagePath</span>, <span style=color:#66d9ef>function</span>(<span style=color:#a6e22e>loadedImg</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>img</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>loadedImg</span>;
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>originalImg</span>.<span style=color:#a6e22e>elt</span>.<span style=color:#a6e22e>src</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>imagePath</span>; <span style=color:#75715e>// Establece la ruta de la imagen original
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>originalImg</span>.<span style=color:#a6e22e>size</span>(<span style=color:#ae81ff>200</span>, <span style=color:#ae81ff>200</span>); <span style=color:#75715e>// Establece el tamaño de la imagen original
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>originalImg</span>.<span style=color:#a6e22e>position</span>(<span style=color:#ae81ff>410</span>, <span style=color:#ae81ff>0</span>); <span style=color:#75715e>// Establece la posición de la imagen original
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>background</span>(<span style=color:#ae81ff>255</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>redraw</span>();
+</span></span><span style=display:flex><span>    });
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyVignetteEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader_v_p.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/vignette.frag&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;vignette&#39;</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyUnfocusEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader_v_p.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/unfocus.frag&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;unfocus&#39;</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>applyZoomEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadShader</span>(<span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/shader_v_p.vert&#39;</span>, <span style=color:#e6db74>&#39;/showcase/sketches/post_shaders/zoom.frag&#39;</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39;zoom&#39;</span>;
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#75715e>// Dibuja la escena
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>   <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>draw</span>()  {
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#f92672>!</span><span style=color:#a6e22e>img</span>) <span style=color:#66d9ef>return</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>shader</span>(<span style=color:#a6e22e>shaderProgram</span>);
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_texture&#39;</span>, <span style=color:#a6e22e>img</span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;vignette&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_radius&#39;</span>, <span style=color:#ae81ff>0.5</span>);
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_softness&#39;</span>, <span style=color:#ae81ff>0.2</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;unfocus&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_blurAmount&#39;</span>, <span style=color:#ae81ff>0.02</span>);
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;zoom&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>shaderProgram</span>.<span style=color:#a6e22e>setUniform</span>(<span style=color:#e6db74>&#39;u_zoomAmount&#39;</span>, <span style=color:#ae81ff>1.5</span>);
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Dibuja un cuadrado con los vértices generados
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>beginShape</span>();
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>4</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#66d9ef>let</span> <span style=color:#a6e22e>vertexData</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>vertices</span>[<span style=color:#a6e22e>i</span>];
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>vertex</span>(<span style=color:#a6e22e>vertexData</span>[<span style=color:#ae81ff>0</span>], <span style=color:#a6e22e>vertexData</span>[<span style=color:#ae81ff>1</span>], <span style=color:#a6e22e>i</span> <span style=color:#f92672>%</span> <span style=color:#ae81ff>2</span>, <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>floor</span>(<span style=color:#a6e22e>i</span> <span style=color:#f92672>/</span> <span style=color:#ae81ff>2</span>));
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>endShape</span>(<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>CLOSE</span>);
+</span></span><span style=display:flex><span>  };
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>changeImageAndEffect</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>loadImageAndApplyEffect</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;vignette&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>applyUnfocusEffect</span>();
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> <span style=color:#66d9ef>if</span> (<span style=color:#a6e22e>currentEffect</span> <span style=color:#f92672>===</span> <span style=color:#e6db74>&#39;unfocus&#39;</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>applyZoomEffect</span>();
+</span></span><span style=display:flex><span>    } <span style=color:#66d9ef>else</span> {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>applyVignetteEffect</span>();
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>changeVertexValues</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Genera nuevos valores aleatorios para los vértices
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#66d9ef>for</span> (<span style=color:#66d9ef>let</span> <span style=color:#a6e22e>i</span> <span style=color:#f92672>=</span> <span style=color:#ae81ff>0</span>; <span style=color:#a6e22e>i</span> <span style=color:#f92672>&lt;</span> <span style=color:#ae81ff>4</span>; <span style=color:#a6e22e>i</span><span style=color:#f92672>++</span>) {
+</span></span><span style=display:flex><span>      <span style=color:#a6e22e>vertices</span>[<span style=color:#a6e22e>i</span>] <span style=color:#f92672>=</span> [<span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>), <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>random</span>(<span style=color:#f92672>-</span><span style=color:#ae81ff>1</span>, <span style=color:#ae81ff>1</span>)];
+</span></span><span style=display:flex><span>    }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>redraw</span>(); <span style=color:#75715e>// Vuelve a dibujar la escena con los nuevos valores
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#66d9ef>function</span> <span style=color:#a6e22e>changeInterval</span>() {
+</span></span><span style=display:flex><span>    <span style=color:#75715e>// Cambia el intervalo del setInterval
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>interval</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>intervalSlider</span>.<span style=color:#a6e22e>value</span>();
+</span></span><span style=display:flex><span>    <span style=color:#a6e22e>clearInterval</span>(<span style=color:#a6e22e>intervalId</span>); <span style=color:#75715e>// Cancela el intervalo actual utilizando el ID almacenado
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>    <span style=color:#a6e22e>intervalId</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setInterval</span>(<span style=color:#a6e22e>changeVertexValues</span>, <span style=color:#a6e22e>interval</span>); <span style=color:#75715e>// Establece el nuevo intervalo
+</span></span></span><span style=display:flex><span><span style=color:#75715e></span>  }
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>loadImageAndApplyEffect</span>();
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span> 
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>setup</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>setup</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>draw</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>draw</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>loadImageAndApplyEffect</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>loadImageAndApplyEffect</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>changeInterval</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>changeInterval</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>changeVertexValues</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>changeVertexValues</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>changeImageAndEffect</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>changeImageAndEffect</span>;
+</span></span><span style=display:flex><span>  <span style=color:#a6e22e>p</span>.<span style=color:#a6e22e>preload</span> <span style=color:#f92672>=</span> <span style=color:#a6e22e>preload</span>;
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>}, <span style=color:#e6db74>&#34;shader_soft&#34;</span>);
+</span></span></code></pre></div></div></details><blockquote class="book-hint danger"><p>REFERENCIAS:</p><p>Conceptos:</p><p>Blur: <a href=https://en.wikipedia.org/wiki/Motion_blur>https://en.wikipedia.org/wiki/Motion_blur</a></p><p>Vignette: <a href=https://en.wikipedia.org/wiki/Vignetting>https://en.wikipedia.org/wiki/Vignetting</a></p><p>Proyecto 1:
+Curvas: <a href="https://www.youtube.com/watch?v=me04ZrTJqWA&amp;t=745s">https://www.youtube.com/watch?v=me04ZrTJqWA&t=745s</a></p><p>Partición de la imagen: <a href="https://www.youtube.com/watch?v=-YS5t1R-GO8">https://www.youtube.com/watch?v=-YS5t1R-GO8</a></p><p>Pryecto 2:</p><p>Aplicación de conceptos: <a href=https://itp-xstory.github.io/p5js-shaders/#/>https://itp-xstory.github.io/p5js-shaders/#/</a></p><p>Chat GPT</p></blockquote></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/visualcomputing/showcase/commit/66d3601667f86cede5bc675c2b15b0c1da2af2de title='Last modified by Trianon27 | June 9, 2023' target=_blank rel=noopener><img src=/showcase/svg/calendar.svg class=book-icon alt=Calendar>
+<span>June 9, 2023</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav id=TableOfContents><ul><li><a href=#visual-posteffects>Visual posteffects</a><ul><li><a href=#qué-es-un-post-efecto->Qué es un post efecto? 📕</a></li><li><a href=#aplicación-de-post-efectos->Aplicación de post efectos 🎨</a><ul><li><a href=#post-efectos-con-software->Post efectos con software 🖥️</a></li><li><a href=#post-efectos-con-shaders->Post efectos con shaders 🎨</a></li><li><a href=#post-efecto-con-software-y-shaders>Post efecto con software y shaders</a></li></ul></li></ul></li></ul></nav></div></aside></main></body></html>
