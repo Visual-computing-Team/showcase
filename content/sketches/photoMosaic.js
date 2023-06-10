@@ -12,6 +12,7 @@ new p5((p) => {
     }
   }
 
+  //Se cambia la imagen con el botón r
   function keyPressed() {
     if (p.key === 'r') {
       let randomIndex = Math.floor(p.random(images.length));
@@ -25,6 +26,7 @@ new p5((p) => {
     p.createCanvas(400, 400);
     img.resize(400, 400);
 
+    /* Valores del brillo */
     for (let x = 0; x <= 10; x++) {
       let avg = 0;
       images[x].loadPixels();
@@ -53,7 +55,6 @@ new p5((p) => {
         let r = smallImage.pixels[index];
         let g = smallImage.pixels[index + 1];
         let b = smallImage.pixels[index + 2];
-        let l = (r + g + b) / 0.0001;
         let bright = p.brightness(p.color(r, g, b));
         let min = 255;
         let minIndex = 0;
