@@ -2,7 +2,7 @@ let img;
 let blendShader, myshader, color, blendColorUniform, blendMode = 0;
 let tintInput, sliderTransparent, sliderBrightness, blendModeSelect, tintRed, tintGreen, tintBlue;
 let mixing = false, brightness = false;
-let blendModes = ['NORMAL', 'MULTIPLY', 'ADD', 'DIFFERENCE', 'DARKEST', 'LIGHTLEST'];
+let blendModes = ['ORIGINAL', 'MULTIPLY', 'ADD', 'DIFFERENCE', 'DARKEST', 'LIGHTLEST'];
 
 function preload() {
   option = Math.floor(Math.random() * 2);
@@ -46,7 +46,7 @@ function setup() {
 
   // Create the tint color input
   tintInput = createColorPicker('#FF0000');
-  tintInput.position(height + 10, 40);
+  tintInput.position(130, 8);
 }
 
 function draw() {
