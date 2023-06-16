@@ -21,7 +21,7 @@ new p5((p) => {
 
   let buildings = [];
 
-  // En está función se crean lo objetos 3d con los diferentes parámetros como:
+  // En esta función se crean los objetos 3D con los diferentes parámetros como:
   // x, y, z: posición del objeto
   // width, height, depth: dimensiones del objeto
   p.Building = function(x, y, z, width, height, depth, shape) {
@@ -41,13 +41,15 @@ new p5((p) => {
         p.cylinder(this.width / 2, this.height);
       } else if (this.shape === 'sphere') {
         p.sphere(this.width / 2);
+      } else if (this.shape === 'cone') {
+        p.cone(this.width / 2, this.height);
       }
 
       p.pop();
     };
   }
 
-  // Se crean los slider para modificar las dimensiones dle objeto 
+  // Se crean los sliders para modificar las dimensiones del objeto 
   let sliders = {
     width: null,
     height: null,
@@ -99,6 +101,8 @@ new p5((p) => {
         p.fill('green');
       } else if (buildings[i].shape === 'sphere') {
         p.fill('yellow');
+      } else if (buildings[i].shape === 'cone') {
+        p.fill('orange');
       }
       buildings[i].display();
     }
@@ -113,18 +117,18 @@ new p5((p) => {
     p.cylinder(20, 50);
   }
 
-  //Movimiento del objeto con las teclas
+  // Movimiento del objeto con las teclas
   p.keyPressed = function() {
-    if (p.keyCode === p.UP_ARROW) { // arrow up
+    if (p.key === 'w' || p.key === 'W') { // W key
       keysDown.UD[0] = 1;
     }
-    if (p.keyCode === p.DOWN_ARROW) { // arrow down
+    if (p.key === 's' || p.key === 'S') { // S key
       keysDown.UD[1] = -1;
     }
-    if (p.keyCode === p.LEFT_ARROW) { // arrow left
+    if (p.key === 'a' || p.key === 'A') { // A key
       keysDown.LR[0] = -1;
     }
-    if (p.keyCode === p.RIGHT_ARROW) { // arrow right
+    if (p.key === 'd' || p.key === 'D') { // D key
       keysDown.LR[1] = 1;
     }
 
@@ -132,16 +136,16 @@ new p5((p) => {
   }
 
   p.keyReleased = function() {
-    if (p.keyCode === p.UP_ARROW) { // arrow up
+    if (p.key === 'w' || p.key === 'W') { // W key
       keysDown.UD[0] = 0;
     }
-    if (p.keyCode === p.DOWN_ARROW) { // arrow down
+    if (p.key === 's' || p.key === 'S') { // S key
       keysDown.UD[1] = 0;
     }
-    if (p.keyCode === p.LEFT_ARROW) { // arrow left
+    if (p.key === 'a' || p.key === 'A') { // A key
       keysDown.LR[0] = 0;
     }
-    if (p.keyCode === p.RIGHT_ARROW) { // arrow right
+    if (p.key === 'd' || p.key === 'D') { // D key
       keysDown.LR[1] = 0;
     }
 
@@ -158,8 +162,7 @@ new p5((p) => {
   p.setupButtons = function() {
 
     // Botón para colocar esferas
-    p.addButton("Esfera", 10, 60, function() {
-
+    p.addButton("Esfera", 10,725, function() {
       let width = sliders.width.value();
       let height = sliders.height.value();
       let depth = sliders.depth.value();
@@ -167,7 +170,7 @@ new p5((p) => {
     });
 
     // Botón para colocar cilindros
-    p.addButton("Cilindro", 110, 60, function() {
+    p.addButton("Cilindro", 110, 725, function() {
       let width = sliders.width.value();
       let height = sliders.height.value();
       let depth = sliders.depth.value();
@@ -175,25 +178,32 @@ new p5((p) => {
     });
 
     // Botón para colocar cubos
-    p.addButton("Cubo", 210, 60, function() {
+    p.addButton("Cubo", 210, 725, function() {
       let width = sliders.width.value();
       let height = sliders.height.value();
       let depth = sliders.depth.value();
       buildings.push(new p.Building(player.pos.x - 50, player.pos.y, player.pos.z, width, height, depth, 'cube'));
+    });
+
+    // Botón para colocar conos
+    p.addButton("Cono", 310, 725, function() {
+      let width = sliders.width.value();
+      let height = sliders.height.value();
+      let depth = sliders.depth.value();
+      buildings.push(new p.Building(player.pos.x - 50, player.pos.y, player.pos.z, width, height, depth, 'cone'));
     });
   }
 
   // Crear los sliders
   p.createSliders = function() {
     sliders.width = p.createSlider(50, 200, 100);
-    sliders.width.position(10, 100);
+    sliders.width.position(10, 785);
   
     sliders.height = p.createSlider(50, 200, 100);
-    sliders.height.position(10, 120);
+    sliders.height.position(10, 810);
   
     sliders.depth = p.createSlider(50, 200, 100);
-    sliders.depth.position(10, 140);
-
+    sliders.depth.position(10, 835);
   }
   
 }, '3d_prototype');
