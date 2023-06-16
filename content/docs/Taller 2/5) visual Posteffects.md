@@ -565,6 +565,18 @@ new p5((p) => {
 ```
 {{< /details >}}
 
+{{< hint info >}}
+### Conclusiones
+
+- Los post efectos implementados con software tardan mucho más en procesar ya que se debe cargar cada pixel.
+
+- Los post efectos con shaders permiten mayor flexibilidad ya que se púede modificar determinadas secciones de una imagen sin iterar sobre cada pixel.
+
+- Se pueden utilizar ambas formas, es decir, tanto por software como por shaders, para implementar proyectos más optimizados. 
+
+{{< /hint >}}
+
+
 
 {{< hint danger >}}
  REFERENCIAS:

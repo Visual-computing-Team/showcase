@@ -125,6 +125,17 @@ new p5((p) => {
 ```
 {{< /details >}}
 
+{{< hint info >}}
+### Conclusiones
+
+- El foto mosaico hecho por software tarda mucho más que uno hecho con shaders.
+
+- El foto mosaico hecho por software permite ver que el procesamiento de cada pixel se debe iterar, mientras que, con shaders,
+dicha iteración no se aplica sino que se tiene control de cada pixe.
+
+
+{{< /hint >}}
+
 {{< hint danger >}}
  REFERENCIAS:
 
