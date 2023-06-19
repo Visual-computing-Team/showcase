@@ -12,7 +12,7 @@ El foto Mosaico es una técnica de ilustración que consiste en crear una imagen
 
 {{< hint info >}}
 
-    1. Se baja la imagen original, en este caso la image un perrito.
+    1. Se baja la imagen original, en este caso la imagen de un perrito.
 
     2. Se toma la misma imagen y se hace una copia mucho más
     pequeña para tomarla como referencia para el mosaico.
@@ -22,10 +22,12 @@ El foto Mosaico es una técnica de ilustración que consiste en crear una imagen
     menores píxeles.
 
     5. Se descargan las imágenes para el mosaoico y se toma
-    el brillo de cada una de ellas.
+    el brillo de cada una de ellas, teniendo en cuenta el promedio
+    de luminisencia que ahí en la totalidad de cada imagen.
 
-    5. Con referente a la imagen pequeña se toma el brillo de
-    cada pixel y se busca la imagen que más se asemeje a ese brillo.
+    5. Con referente a la imagen pequeña, es decir, la imagen escala
+     se toma el brillo de cada pixel y se busca la imagen que más 
+     se asemeje a ese brillo.
 
     6. Se crea la imagen mosaico.
 
@@ -131,7 +133,7 @@ new p5((p) => {
 - El foto mosaico hecho por software tarda mucho más que uno hecho con shaders.
 
 - El foto mosaico hecho por software permite ver que el procesamiento de cada pixel se debe iterar, mientras que, con shaders,
-dicha iteración no se aplica sino que se tiene control de cada pixe.
+dicha iteración no se aplica sino que se tiene control de cada pixel.
 
 
 {{< /hint >}}

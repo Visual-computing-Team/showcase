@@ -6,22 +6,22 @@
 Implemente algunos post efectos que encuentre interesantes
 {{< /hint >}}
 
-## Qué es un post efecto? 📕
+## ¿Qué es un post efecto? 📕
 
 Un post efecto es, precisamente, un efecto que se aplica a la imagen final, una vez que se han renderizado todos los objetos de la escena. Estos efectos se usan para varios fines, sin embargo el que más sobresale es el de resaltar ciertos aspectos de la escena, como por ejemplo, el resaltar los bordes de los objetos o el resaltar ciertos colores del renderizado final.
 
 Algunos de los post efectos más comunes son:
 
 {{< hint info >}}
-1. **Vignette**: Este efecto se usa para oscurecer los bordes de la imagen, para darle un efecto de viñeta. Este efecto se usa mucho en juegos de terror, para darle un efecto de misterio a la escena.
+1. **Vignette**: Este efecto se usa para oscurecer los bordes de la imagen, para darle un efecto de viñeta. Este efecto se usa mucho en juegos de terror para darle un efecto de misterio a la escena.
 
-2. **Zoom** : Este efecto se usa para acercar la imagen a cierta parte en específico o para hacerla ver más grande en cierta zona como tal. Este efecto tiene varios usos, uno de los más comunes es cuando se quiere implementar el efecto de lupa, usado tanto en juegos como en aplicaciones.
+2. **Zoom** : Este efecto se usa para acercar la imagen a cierta parte en específico o para hacerla ver más grande en cierta zona como tal. Este tiene varios usos, uno de los más comunes es cuando se quiere implementar el efecto de lupa, usado tanto en juegos como en aplicaciones.
 
-3. **Blur**: Este efecto da desenfoque a la imagen, distorsionando la imagen original y haciendola menos visible y más borrosa. Este efecto se asemeja al desenfoque se genera cuando se toma una foto con una cámara, y se usa para darle un efecto de movimiento a la imagen.
+3. **Blur**: Este efecto da desenfoque a la imagen, distorsionando la imagen original y haciendola menos visible y más borrosa. Este se asemeja al desenfoque que se genera cuando se toma una foto con una cámara y se usa para darle un efecto de movimiento a la imagen.
 
-4. **Filtros de color**: Este efecto se usa para cambiar el color de la imagen, añadiendo o restando nitidiez, o incluso poniendo la imagen con cierta paleta de colores.
+4. **Filtros de color**: Este efecto se usa para cambiar el color de la imagen añadiendo o restando nitidiez, o incluso poniendo la imagen con cierta paleta de colores.
 
-5. **Ajuste de perspectiva**: Este efecto se usa para cambiar la perspectiva de la imagen, haciendo que se vea desde un punto de vista diferente, o incluso desde un punto de vista más alto o más bajo.
+5. **Ajuste de perspectiva**: Este efecto se usa para cambiar la perspectiva de la imagen haciendo que se vea desde un punto de vista diferente, o incluso desde un punto de vista más alto o más bajo.
  {{< /hint >}}
 
 ## Aplicación de post efectos 🎨
@@ -176,7 +176,7 @@ new p5((p) => {
 
 ### Post efectos con shaders 🎨
 
-Ahora veremos la gran diferencia que tienen los post efectos a la hora de aplicarlos con shaders. En este caso, se implementaron tres post efectos, los cuales son:
+Ahora veremos la gran diferencia que tienen los post efectos a la hora de aplicarlos con shaders. En este caso se implementaron tres post efectos, los cuales son:
 
 {{< tabs "Efectos con shaders" >}}
 {{< tab "Blur" >}} 
@@ -410,9 +410,9 @@ Para este post efecto se implementa los mismos post efectos con shaders, no obst
 
 {{< hint warning >}}
     Para poder ver los efectos, debe oprimir el 
-    botón "Cambiar imagen y efecto. Puede jugar con el 
+    botón "Cambiar imagen y efecto". Puede jugar con el 
     slider para acelarar o desacelerar la construcción
-    de la imagen"
+    de la imagen.
 {{< /hint >}}
 
 
@@ -568,9 +568,9 @@ new p5((p) => {
 {{< hint info >}}
 ### Conclusiones
 
-- Los post efectos implementados con software tardan mucho más en procesar ya que se debe cargar cada pixel.
+- Los post efectos implementados con software tardan mucho más en procesar ya que se debe cargar por cada pixel.
 
-- Los post efectos con shaders permiten mayor flexibilidad ya que se púede modificar determinadas secciones de una imagen sin iterar sobre cada pixel.
+- Los post efectos con shaders permiten mayor flexibilidad ya que se púede modificar determinadas secciones de una imagen sin iterar sobre cada pixel de una manera mucho más simplificada.
 
 - Se pueden utilizar ambas formas, es decir, tanto por software como por shaders, para implementar proyectos más optimizados. 
 
