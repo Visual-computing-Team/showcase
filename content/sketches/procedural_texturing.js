@@ -1,7 +1,11 @@
 
 let pg;
 let truchetShader;
-let textures = ['bricks.frag', 'colorful.frag', 'bathroom.frag', 'color_bathroom.frag', 'colorful2.frag'];
+let textures = ['/showcase/sketches/procedural_texturing/bricks.frag', 
+                '/showcase/sketches/procedural_texturing/colorful.frag', 
+                '/showcase/sketches/procedural_texturing/bathroom.frag', 
+                '/showcase/sketches/procedural_texturing/color_bathroom.frag', 
+                '/showcase/sketches/procedural_texturing/colorful2.frag'];
 let figures = [
   function() {
     box(200, 200);
@@ -30,8 +34,8 @@ function preload() {
 
 function setup() {
   index = floor(random(figures.length));
-  createCanvas(800, 800, WEBGL);
-  pg = createGraphics(800, 800, WEBGL);
+  createCanvas(500, 500, WEBGL);
+  pg = createGraphics(500, 500, WEBGL);
   textureMode(NORMAL);
   noStroke();
   pg.noStroke();

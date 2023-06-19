@@ -76,6 +76,10 @@ function draw() {
 }
 ```
 
+<div style="display:flex; flex-direction: column; align-items: center; justify-content: center;" id="procedural-texturing">
+    {{< p5-iframe sketch="/showcase/sketches/procedural_texturing.js" lib1="https://cdn.jsdelivr.net/gh/VisualComputing/p5.treegl/p5.treegl.js" lib2="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js" width="530" height="530">}}
+</div>
+
 ## **Conclusiones 🤓**
 * El texturing procedural permite una mayor flexibilidad y variación en las texturas en diferentes objetos, ya que se pueden ajustar parámetros y reglas para crear efectos visuales únicos y personalizados.
 
